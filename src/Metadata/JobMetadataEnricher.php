@@ -26,6 +26,7 @@ final class JobMetadataEnricher implements MetadataEnricherInterface
         }
 
         $job = $this->jobMap->get($this->settings['job']);
+        $metadata = $metadata->with('job', $this->settings['job']);
         foreach ($job->getSettings() as $setting => $value) {
             $metadata = $metadata->with($setting, $value);
         }
