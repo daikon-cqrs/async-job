@@ -67,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/daikon-cqrs/data-structure.git",
-                "reference": "5d1456274b9b743230f97ab2a8ab776ff699ef13"
+                "reference": "723c960d94a21554ca90234da307f1e945531cd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/daikon-cqrs/data-structure/zipball/5d1456274b9b743230f97ab2a8ab776ff699ef13",
-                "reference": "5d1456274b9b743230f97ab2a8ab776ff699ef13",
+                "url": "https://api.github.com/repos/daikon-cqrs/data-structure/zipball/723c960d94a21554ca90234da307f1e945531cd4",
+                "reference": "723c960d94a21554ca90234da307f1e945531cd4",
                 "shasum": ""
             },
             "require": {
@@ -81,8 +81,9 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.2",
-                "satooshi/php-coveralls": "master@dev",
-                "squizlabs/php_codesniffer": "^3.0"
+                "sebastian/phpcpd": "^3.0",
+                "squizlabs/php_codesniffer": "^3.0",
+                "vimeo/psalm": "^0.3.47"
             },
             "type": "library",
             "autoload": {
@@ -94,6 +95,12 @@
             "license": [
                 "MPL-2.0"
             ],
+            "authors": [
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/daikon-cqrs/data-structure/graphs/contributors"
+                }
+            ],
             "description": "Immutable data-structure traits based on php/ds.",
             "homepage": "https://github.com/daikon-cqrs/data-structures",
             "keywords": [
@@ -102,7 +109,7 @@
                 "list",
                 "map"
             ],
-            "time": "2017-07-13 22:58:37"
+            "time": "2017-07-17 14:05:15"
         },
         {
             "name": "daikon/message-bus",
@@ -110,12 +117,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/daikon-cqrs/message-bus.git",
-                "reference": "b6fae7aabc6ca30dc6202175872ed592c102bbfc"
+                "reference": "1f19d7234a5f4db875f9f8708dcbb638bcbc1407"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/daikon-cqrs/message-bus/zipball/b6fae7aabc6ca30dc6202175872ed592c102bbfc",
-                "reference": "b6fae7aabc6ca30dc6202175872ed592c102bbfc",
+                "url": "https://api.github.com/repos/daikon-cqrs/message-bus/zipball/1f19d7234a5f4db875f9f8708dcbb638bcbc1407",
+                "reference": "1f19d7234a5f4db875f9f8708dcbb638bcbc1407",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +151,7 @@
                 "message-bus",
                 "messaging"
             ],
-            "time": "2017-07-14 00:11:54"
+            "time": "2017-07-17 10:46:40"
         },
         {
             "name": "paragonie/random_compat",

@@ -13,7 +13,6 @@ class NoRetry implements RetryStrategyInterface, FailureStrategyInterface
 
     public function hasFailed()
     {
-        $metadata = $this->job->getMetadata();
-        return isset($metadata['retries']);
+        return true;
     }
 }
