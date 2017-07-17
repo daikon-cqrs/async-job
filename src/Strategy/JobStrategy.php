@@ -4,6 +4,7 @@ namespace Daikon\AsyncJob\Strategy;
 
 use Daikon\AsyncJob\Strategy\Retry\RetryStrategyInterface;
 use Daikon\AsyncJob\Strategy\Failure\FailureStrategyInterface;
+use Daikon\MessageBus\EnvelopeInterface;
 
 final class JobStrategy implements JobStrategyInterface
 {
@@ -17,18 +18,18 @@ final class JobStrategy implements JobStrategyInterface
         $this->failureStrategy = $failureStrategy;
     }
 
-    public function getRetryInterval(): int
+    public function getRetryInterval(EnvelopeInterface $envelope): int
     {
-        return $this->retryStrategy->getInterval();
+        return $this->retryStrategy->getInterval($envelope);
     }
 
-    public function hasFailed(): bool
+    public function hasFailed(EnvelopeInterface $envelope): bool
     {
-        return $this->failureStrategy->hasFailed();
+        return $this->failureStrategy->hasFailed($envelope);
     }
 
-    public function canRetry(): bool
+    public function canRetry(EnvelopeInterface $envelope): bool
     {
-        return !$this->hasFailed() && $this->getRetryInterval();
+        return !$this->hasFailed($envelope) && $this->getRetryInterval($envelope);
     }
 }
