@@ -4,7 +4,7 @@ namespace Daikon\AsyncJob\Job;
 
 use Daikon\AsyncJob\Strategy\JobStrategyInterface;
 
-interface JobInterface
+interface JobDefinitionInterface
 {
     public function getStrategy(): JobStrategyInterface;
 

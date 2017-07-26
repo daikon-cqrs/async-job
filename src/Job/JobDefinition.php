@@ -4,7 +4,7 @@ namespace Daikon\AsyncJob\Job;
 
 use Daikon\AsyncJob\Strategy\JobStrategyInterface;
 
-final class Job implements JobInterface
+final class JobDefinition implements JobInterface
 {
     private $jobStrategy;
 
