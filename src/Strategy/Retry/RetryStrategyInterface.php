@@ -6,5 +6,5 @@ use Daikon\MessageBus\EnvelopeInterface;
 
 interface RetryStrategyInterface
 {
-    public function getInterval(EnvelopeInterface $envelope);
+    public function getInterval(EnvelopeInterface $envelope): ?int;
 }

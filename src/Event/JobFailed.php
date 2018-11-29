@@ -6,11 +6,13 @@ use Daikon\MessageBus\MessageInterface;
 
 final class JobFailed implements MessageInterface
 {
+    /** @var MessageInterface */
     private $failedMessage;
 
-    public static function fromNative($data): MessageInterface
+    /** @param array $state */
+    public static function fromNative($state): MessageInterface
     {
-        return new self($data['failed_message']);
+        return new self($state['failed_message']);
     }
 
     public function toNative(): array

@@ -6,7 +6,7 @@ use Daikon\MessageBus\EnvelopeInterface;
 
 interface JobStrategyInterface
 {
-    public function getRetryInterval(EnvelopeInterface $envelope): int;
+    public function getRetryInterval(EnvelopeInterface $envelope): ?int;
 
     public function hasFailed(EnvelopeInterface $envelope): bool;
 

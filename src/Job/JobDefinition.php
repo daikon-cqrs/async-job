@@ -4,10 +4,12 @@ namespace Daikon\AsyncJob\Job;
 
 use Daikon\AsyncJob\Strategy\JobStrategyInterface;
 
-final class JobDefinition implements JobInterface
+final class JobDefinition
 {
+    /** @var JobStrategyInterface */
     private $jobStrategy;
 
+    /** @var array */
     private $settings;
 
     public function __construct(JobStrategyInterface $jobStrategy, array $settings = [])

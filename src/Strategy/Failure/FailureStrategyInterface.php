@@ -6,5 +6,5 @@ use Daikon\MessageBus\EnvelopeInterface;
 
 interface FailureStrategyInterface
 {
-    public function hasFailed(EnvelopeInterface $envelope);
+    public function hasFailed(EnvelopeInterface $envelope): bool;
 }

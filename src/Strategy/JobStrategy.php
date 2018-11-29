@@ -8,8 +8,10 @@ use Daikon\MessageBus\EnvelopeInterface;
 
 final class JobStrategy implements JobStrategyInterface
 {
+    /** @var RetryStrategyInterface */
     private $retryStrategy;
 
+    /** @var FailureStrategyInterface */
     private $failureStrategy;
 
     public function __construct(RetryStrategyInterface $retryStrategy, FailureStrategyInterface $failureStrategy)
@@ -18,7 +20,7 @@ final class JobStrategy implements JobStrategyInterface
         $this->failureStrategy = $failureStrategy;
     }
 
-    public function getRetryInterval(EnvelopeInterface $envelope): int
+    public function getRetryInterval(EnvelopeInterface $envelope): ?int
     {
         return $this->retryStrategy->getInterval($envelope);
     }

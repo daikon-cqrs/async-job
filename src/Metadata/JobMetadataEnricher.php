@@ -4,13 +4,15 @@ namespace Daikon\AsyncJob\Metadata;
 
 use Daikon\AsyncJob\Job\JobDefinitionMap;
 use Daikon\AsyncJob\JobException;
-use Daikon\MessageBus\Metadata\Metadata;
+use Daikon\MessageBus\Metadata\MetadataInterface;
 use Daikon\MessageBus\Metadata\MetadataEnricherInterface;
 
 final class JobMetadataEnricher implements MetadataEnricherInterface
 {
+    /** @var JobDefinitionMap */
     private $jobDefinitionMap;
 
+    /** @var array */
     private $settings;
 
     public function __construct(JobDefinitionMap $jobDefinitionMap, array $settings)
@@ -19,7 +21,7 @@ final class JobMetadataEnricher implements MetadataEnricherInterface
         $this->settings = $settings;
     }
 
-    public function enrich(Metadata $metadata): Metadata
+    public function enrich(MetadataInterface $metadata): MetadataInterface
     {
         if (!isset($this->settings['job'])) {
             throw new JobException('Enricher requires a job setting to enrich metadata from.');
