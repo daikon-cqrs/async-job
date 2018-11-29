@@ -8,17 +8,17 @@ final class JobFailed implements MessageInterface
 {
     private $failedMessage;
 
-    public static function fromArray(array $data): MessageInterface
+    public static function fromNative($data): MessageInterface
     {
         return new self($data['failed_message']);
     }
 
-    public function toArray(): array
+    public function toNative(): array
     {
-        return $this->failedMessage->toArray();
+        return $this->failedMessage->toNative();
     }
 
-    protected function __construct(MessageInterface $failedMessage)
+    private function __construct(MessageInterface $failedMessage)
     {
         $this->failedMessage = $failedMessage;
     }
