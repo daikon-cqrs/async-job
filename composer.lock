@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82a521f4f296afe33168ab22bb13e1f9",
+    "content-hash": "efd7fee255fdfa1d96ab987a923bae04",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -63,7 +63,7 @@
         },
         {
             "name": "daikon/data-structure",
-            "version": "dev-upgrade/nativecalls",
+            "version": "dev-upgrade-7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/daikon-cqrs/data-structure.git",
@@ -142,20 +142,20 @@
         },
         {
             "name": "daikon/message-bus",
-            "version": "dev-upgrade/nativecalls",
+            "version": "dev-upgrade-7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/daikon-cqrs/message-bus.git",
-                "reference": "061ec02b8d189f9783968315062738d72d9edea9"
+                "reference": "e1c873b871ef794d85c89da1f60a6b1ad5579238"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/daikon-cqrs/message-bus/zipball/061ec02b8d189f9783968315062738d72d9edea9",
-                "reference": "061ec02b8d189f9783968315062738d72d9edea9",
+                "url": "https://api.github.com/repos/daikon-cqrs/message-bus/zipball/e1c873b871ef794d85c89da1f60a6b1ad5579238",
+                "reference": "e1c873b871ef794d85c89da1f60a6b1ad5579238",
                 "shasum": ""
             },
             "require": {
-                "daikon/data-structure": "dev-upgrade/nativecalls",
+                "daikon/data-structure": "dev-upgrade-7.2",
                 "daikon/interop": "dev-upgrade-7.2",
                 "php": "^7.2",
                 "ramsey/uuid": "^3.8"
@@ -182,7 +182,7 @@
                 "message-bus",
                 "messaging"
             ],
-            "time": "2018-12-01T13:30:37+00:00"
+            "time": "2018-12-01T14:38:11+00:00"
         },
         {
             "name": "paragonie/random_compat",
