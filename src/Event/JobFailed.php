@@ -1,4 +1,12 @@
 <?php
+/**
+ * This file is part of the daikon-cqrs/async-job project.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
 
 namespace Daikon\AsyncJob\Event;
 
@@ -6,19 +14,21 @@ use Daikon\MessageBus\MessageInterface;
 
 final class JobFailed implements MessageInterface
 {
+    /** @var MessageInterface */
     private $failedMessage;
 
-    public static function fromArray(array $data): MessageInterface
+    /** @param array $state */
+    public static function fromNative($state): MessageInterface
     {
-        return new self($data['failed_message']);
+        return new self($state['failed_message']);
     }
 
-    public function toArray(): array
+    public function toNative(): array
     {
-        return $this->failedMessage->toArray();
+        return $this->failedMessage->toNative();
     }
 
-    protected function __construct(MessageInterface $failedMessage)
+    private function __construct(MessageInterface $failedMessage)
     {
         $this->failedMessage = $failedMessage;
     }

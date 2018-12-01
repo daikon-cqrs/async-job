@@ -1,4 +1,4 @@
-# async-job
+# Async Job
 
 [![Build Status](https://scrutinizer-ci.com/g/daikon-cqrs/async-job/badges/build.png?b=master)](https://scrutinizer-ci.com/g/daikon-cqrs/async-job/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/daikon-cqrs/async-job/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/daikon-cqrs/async-job/?branch=master)

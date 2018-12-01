@@ -1,13 +1,23 @@
 <?php
+/**
+ * This file is part of the daikon-cqrs/async-job project.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
 
 namespace Daikon\AsyncJob\Job;
 
 use Daikon\AsyncJob\Strategy\JobStrategyInterface;
 
-final class JobDefinition implements JobInterface
+final class JobDefinition
 {
+    /** @var JobStrategyInterface */
     private $jobStrategy;
 
+    /** @var array */
     private $settings;
 
     public function __construct(JobStrategyInterface $jobStrategy, array $settings = [])

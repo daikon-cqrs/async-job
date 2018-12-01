@@ -1,4 +1,12 @@
 <?php
+/**
+ * This file is part of the daikon-cqrs/async-job project.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+declare(strict_types=1);
 
 namespace Daikon\AsyncJob\Strategy;
 
@@ -8,8 +16,10 @@ use Daikon\MessageBus\EnvelopeInterface;
 
 final class JobStrategy implements JobStrategyInterface
 {
+    /** @var RetryStrategyInterface */
     private $retryStrategy;
 
+    /** @var FailureStrategyInterface */
     private $failureStrategy;
 
     public function __construct(RetryStrategyInterface $retryStrategy, FailureStrategyInterface $failureStrategy)
@@ -18,7 +28,7 @@ final class JobStrategy implements JobStrategyInterface
         $this->failureStrategy = $failureStrategy;
     }
 
-    public function getRetryInterval(EnvelopeInterface $envelope): int
+    public function getRetryInterval(EnvelopeInterface $envelope): ?int
     {
         return $this->retryStrategy->getInterval($envelope);
     }
