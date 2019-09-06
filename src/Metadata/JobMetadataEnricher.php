@@ -12,8 +12,8 @@ namespace Daikon\AsyncJob\Metadata;
 
 use Daikon\AsyncJob\Job\JobDefinitionMap;
 use Daikon\AsyncJob\JobException;
-use Daikon\MessageBus\Metadata\MetadataInterface;
-use Daikon\MessageBus\Metadata\MetadataEnricherInterface;
+use Daikon\Metadata\MetadataInterface;
+use Daikon\Metadata\MetadataEnricherInterface;
 
 final class JobMetadataEnricher implements MetadataEnricherInterface
 {
