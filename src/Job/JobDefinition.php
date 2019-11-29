@@ -12,7 +12,7 @@ namespace Daikon\AsyncJob\Job;
 
 use Daikon\AsyncJob\Strategy\JobStrategyInterface;
 
-final class JobDefinition
+final class JobDefinition implements JobDefinitionInterface
 {
     /** @var JobStrategyInterface */
     private $jobStrategy;
