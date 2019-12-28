@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * This file is part of the daikon-cqrs/async-job project.
  *
@@ -6,17 +6,17 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
-
 namespace Daikon\AsyncJob\Strategy;
 
+use Countable;
 use Daikon\DataStructure\TypedMapTrait;
+use IteratorAggregate;
 
-final class JobStrategyMap implements \IteratorAggregate, \Countable
+final class JobStrategyMap implements IteratorAggregate, Countable
 {
     use TypedMapTrait;
 
-    public function __construct(array $strategies = [])
+    public function __construct(iterable $strategies = [])
     {
         $this->init($strategies, JobStrategyInterface::class);
     }
