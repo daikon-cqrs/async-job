@@ -6,18 +6,17 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
-
 namespace Daikon\AsyncJob\Worker;
 
+use Daikon\DataStructure\TypedMapInterface;
 use Daikon\DataStructure\TypedMapTrait;
 
-final class WorkerMap implements \IteratorAggregate, \Countable
+final class WorkerMap implements TypedMapInterface
 {
     use TypedMapTrait;
 
-    public function __construct(array $workers = [])
+    public function __construct(iterable $workers = [])
     {
-        $this->init($workers, WorkerInterface::class);
+        $this->init($workers, [WorkerInterface::class]);
     }
 }

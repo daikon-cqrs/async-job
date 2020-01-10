@@ -12,11 +12,9 @@ use Daikon\AsyncJob\Strategy\JobStrategyInterface;
 
 final class JobDefinition implements JobDefinitionInterface
 {
-    /** @var JobStrategyInterface */
-    private $jobStrategy;
+    private JobStrategyInterface $jobStrategy;
 
-    /** @var array */
-    private $settings;
+    private array $settings;
 
     public function __construct(JobStrategyInterface $jobStrategy, array $settings = [])
     {

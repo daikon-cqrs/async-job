@@ -2,13 +2,13 @@
     "name": "daikon/async-job",
     "type": "library",
     "description": "Asynchronous job components for Daikon projects.",
-    "keywords": [ "asynchronous", "background", "delayed", "job", "worker" ],
+    "keywords": [ "async", "background", "delayed", "job", "worker" ],
     "homepage": "https://github.com/daikon-cqrs/async-job",
     "license": "MPL-2.0",
     "prefer-stable": true,
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.2",
+        "php": "^7.4",
         "beberlei/assert": "^v3.0",
         "daikon/data-structure": "master@dev",
         "daikon/message-bus": "master@dev",
@@ -34,9 +34,9 @@
     },
     "scripts": {
         "build": [ "@sniff", "@tests" ],
-        "code-sniffer-autofix": "phpcbf --standard=PSR2 -d tabWidth=4 src/",
-        "code-sniffer": "phpcs -p -s --extensions=php --standard='PSR1,PSR2' src/",
-        "copy-paste-detector": "phpcpd src/ || true",
+        "code-sniffer-autofix": "phpcbf --standard=PSR2 -d tabWidth=4 src tests",
+        "code-sniffer": "phpcs -p -s --extensions=php --standard='PSR1,PSR2' src tests",
+        "copy-paste-detector": "phpcpd src tests || true",
         "sniff": [
             "@code-sniffer",
             "@copy-paste-detector",

@@ -14,11 +14,9 @@ use Daikon\MessageBus\EnvelopeInterface;
 
 final class JobStrategy implements JobStrategyInterface
 {
-    /** @var RetryStrategyInterface */
-    private $retryStrategy;
+    private RetryStrategyInterface $retryStrategy;
 
-    /** @var FailureStrategyInterface */
-    private $failureStrategy;
+    private FailureStrategyInterface $failureStrategy;
 
     public function __construct(RetryStrategyInterface $retryStrategy, FailureStrategyInterface $failureStrategy)
     {

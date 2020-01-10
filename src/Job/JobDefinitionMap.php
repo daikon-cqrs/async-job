@@ -8,16 +8,15 @@
 
 namespace Daikon\AsyncJob\Job;
 
-use Countable;
+use Daikon\DataStructure\TypedMapInterface;
 use Daikon\DataStructure\TypedMapTrait;
-use IteratorAggregate;
 
-final class JobDefinitionMap implements IteratorAggregate, Countable
+final class JobDefinitionMap implements TypedMapInterface
 {
     use TypedMapTrait;
 
     public function __construct(iterable $jobs = [])
     {
-        $this->init($jobs, JobDefinitionInterface::class);
+        $this->init($jobs, [JobDefinitionInterface::class]);
     }
 }
