@@ -29,7 +29,7 @@ final class JobMetadataEnricher implements MetadataEnricherInterface
     public function enrich(MetadataInterface $metadata): MetadataInterface
     {
         if (!isset($this->settings['job'])) {
-            throw new InvalidArgumentException('Enricher requires a job to enrich metadata from');
+            throw new InvalidArgumentException('Enricher requires a job to enrich metadata from.');
         }
 
         /** @var JobDefinitionInterface $jobDefinition */
