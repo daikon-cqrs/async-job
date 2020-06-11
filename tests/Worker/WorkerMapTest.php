@@ -20,7 +20,8 @@ final class WorkerMapTest extends TestCase
         $workerMap = new WorkerMap(['mock' => $workerMock]);
         $newMap = new WorkerMap($workerMap);
         $this->assertCount(1, $newMap);
-        $this->assertFalse($workerMap === $newMap);
+        $this->assertNotSame($workerMap, $newMap);
+        $this->assertEquals($workerMap, $newMap);
     }
 
     public function testPush(): void

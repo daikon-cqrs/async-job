@@ -20,7 +20,8 @@ final class JobStrategyMapTest extends TestCase
         $strategyMap = new JobStrategyMap(['mock' => $strategyMock]);
         $newMap = new JobStrategyMap($strategyMap);
         $this->assertCount(1, $newMap);
-        $this->assertFalse($strategyMap === $newMap);
+        $this->assertNotSame($strategyMap, $newMap);
+        $this->assertEquals($strategyMap, $newMap);
     }
 
     public function testPush(): void

@@ -20,7 +20,8 @@ final class JobDefinitionMapTest extends TestCase
         $jobMap = new JobDefinitionMap(['mock' => $jobMock]);
         $newMap = new JobDefinitionMap($jobMap);
         $this->assertCount(1, $newMap);
-        $this->assertFalse($jobMap === $newMap);
+        $this->assertNotSame($jobMap, $newMap);
+        $this->assertEquals($jobMap, $newMap);
     }
 
     public function testPush(): void
