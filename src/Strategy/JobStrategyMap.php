@@ -8,13 +8,10 @@
 
 namespace Daikon\AsyncJob\Strategy;
 
-use Daikon\DataStructure\TypedMapInterface;
-use Daikon\DataStructure\TypedMapTrait;
+use Daikon\DataStructure\TypedMap;
 
-final class JobStrategyMap implements TypedMapInterface
+final class JobStrategyMap extends TypedMap
 {
-    use TypedMapTrait;
-
     public function __construct(iterable $strategies = [])
     {
         $this->init($strategies, [JobStrategyInterface::class]);

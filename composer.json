@@ -2,15 +2,15 @@
     "name": "daikon/async-job",
     "type": "library",
     "description": "Asynchronous job components for Daikon-CQRS projects.",
-    "keywords": [ "async", "background", "delayed", "job", "worker" ],
+    "keywords": [ "async", "background", "delayed", "job", "strategy", "worker" ],
     "homepage": "https://github.com/daikon-cqrs/async-job",
     "license": "MPL-2.0",
     "prefer-stable": true,
     "minimum-stability": "dev",
     "require": {
         "php": "^7.4",
-        "beberlei/assert": "^v3.0",
         "daikon/data-structure": "master@dev",
+        "daikon/interop": "master@dev",
         "daikon/message-bus": "master@dev",
         "daikon/metadata": "master@dev"
     },

@@ -10,9 +10,9 @@ namespace Daikon\AsyncJob\Metadata;
 
 use Daikon\AsyncJob\Job\JobDefinitionInterface;
 use Daikon\AsyncJob\Job\JobDefinitionMap;
+use Daikon\Interop\Assertion;
 use Daikon\Metadata\MetadataInterface;
 use Daikon\Metadata\MetadataEnricherInterface;
-use InvalidArgumentException;
 
 final class JobMetadataEnricher implements MetadataEnricherInterface
 {
@@ -28,9 +28,7 @@ final class JobMetadataEnricher implements MetadataEnricherInterface
 
     public function enrich(MetadataInterface $metadata): MetadataInterface
     {
-        if (!isset($this->settings['job'])) {
-            throw new InvalidArgumentException('Enricher requires a job to enrich metadata from.');
-        }
+        Assertion::keyIsset($this->settings, 'job', 'Enricher requires a job definition to enrich metadata with.');
 
         /** @var JobDefinitionInterface $jobDefinition */
         $jobDefinition = $this->jobDefinitionMap->get($this->settings['job']);

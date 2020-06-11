@@ -8,13 +8,10 @@
 
 namespace Daikon\AsyncJob\Worker;
 
-use Daikon\DataStructure\TypedMapInterface;
-use Daikon\DataStructure\TypedMapTrait;
+use Daikon\DataStructure\TypedMap;
 
-final class WorkerMap implements TypedMapInterface
+final class WorkerMap extends TypedMap
 {
-    use TypedMapTrait;
-
     public function __construct(iterable $workers = [])
     {
         $this->init($workers, [WorkerInterface::class]);
