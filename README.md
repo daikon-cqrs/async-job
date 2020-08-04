@@ -5,7 +5,7 @@
 ![Packagist License](https://img.shields.io/packagist/l/daikon/async-job)
 
 [![Build Status](https://travis-ci.com/daikon-cqrs/async-job.svg?branch=master)](https://travis-ci.com/daikon-cqrs/async-job)
-[![Code Coverage](https://scrutinizer-ci.com/g/daikon-cqrs/async-job/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/daikon-cqrs/async-job/?branch=master)
+[![Code Coverage](https://img.shields.io/codecov/c/github/daikon-cqrs/async-job)](https://codecov.io/gh/daikon-cqrs/async-job)
 [![Type Coverage](https://shepherd.dev/github/daikon-cqrs/async-job/coverage.svg)](https://shepherd.dev/github/daikon-cqrs/async-job)
 [![Libraries.io dependency status](https://img.shields.io/librariesio/github/daikon-cqrs/async-job)](https://libraries.io/github/daikon-cqrs/async-job)
 [![Scrutinizer code quality](https://img.shields.io/scrutinizer/quality/g/daikon-cqrs/async-job/master)](https://scrutinizer-ci.com/g/daikon-cqrs/async-job/?branch=master)
