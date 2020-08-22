@@ -9,12 +9,9 @@
 namespace Daikon\AsyncJob\Strategy;
 
 use Daikon\MessageBus\EnvelopeInterface;
+use Daikon\Metadata\MetadataEnricherInterface;
 
-interface JobStrategyInterface
+interface JobStrategyInterface extends MetadataEnricherInterface
 {
-    public function getRetryInterval(EnvelopeInterface $envelope): ?int;
-
-    public function hasFailed(EnvelopeInterface $envelope): bool;
-
     public function canRetry(EnvelopeInterface $envelope): bool;
 }

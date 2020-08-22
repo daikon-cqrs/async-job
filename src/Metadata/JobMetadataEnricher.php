@@ -16,6 +16,8 @@ use Daikon\Metadata\MetadataEnricherInterface;
 
 final class JobMetadataEnricher implements MetadataEnricherInterface
 {
+    public const JOB = 'job';
+
     private JobDefinitionMap $jobDefinitionMap;
 
     private array $settings;
@@ -32,11 +34,11 @@ final class JobMetadataEnricher implements MetadataEnricherInterface
 
         /** @var JobDefinitionInterface $jobDefinition */
         $jobDefinition = $this->jobDefinitionMap->get($this->settings['job']);
-        $metadata = $metadata->with('job', $this->settings['job']);
+        $metadata = $metadata->with(self::JOB, $this->settings['job']);
         foreach ($jobDefinition->getSettings() as $setting => $value) {
             $metadata = $metadata->with($setting, $value);
         }
 
-        return $metadata;
+        return $jobDefinition->getStrategy()->enrich($metadata);
     }
 }
